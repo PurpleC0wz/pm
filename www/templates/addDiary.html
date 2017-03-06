@@ -1,0 +1,27 @@
+<ion-header-bar align-title="center" class="bar-stable">
+    <div class="buttons">
+        <button class="button button-icon button-clear ion-ios-arrow-back" ng-click="$ionicGoBack()"></button>
+    </div>
+
+    <div class="h1 title" >{{title}}</div>
+    <div class="buttons ">
+        <button class="button button-icon button-clear ion-checkmark-round" side="secondary" ng-click="saveDiary()"></button>
+    </div>
+</ion-header-bar>
+
+<ion-view>
+	<ion-content>
+		<div class="list">
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Title</span>
+		    <input type="text" ng-model="diary.title">
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Detail</span>
+		    <input type="text" ng-model="diary.detail">
+		  </label>
+		  
+		  <button class="button button-assertive" style="margin-left: 25%; margin-top:10%;width: 50%;height: 35px;line-height: 35px;min-height: 35px;" ng-click="deleteDiary()" ng-show="canDelete">Delete</button>
+		</div>
+	</ion-content>
+</ion-view>
